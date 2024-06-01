@@ -1,0 +1,46 @@
+.banner {
+  width: 100%;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  margin-top: 20px; /* Добавьте отступ, если необходимо */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery-title {
+  color: var(--main-white-color);
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.35s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.gallery-item:hover {
+  transform: scale(1.45);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}

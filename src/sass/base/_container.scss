@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mq(mob) {
+    max-width: 480px;
+  }
+
+  @include mq(tab) {
+    max-width: 1024px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include mq(desk) {
+    max-width: 1280px;
+  }
+}

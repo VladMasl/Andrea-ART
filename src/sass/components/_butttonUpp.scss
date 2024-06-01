@@ -1,0 +1,67 @@
+.back-to-top {
+  position: fixed;
+  bottom: 107px;
+  right: 30px;
+  border-radius: 100%;
+  //   background: #141c38;
+  background: linear-gradient(
+    0deg,
+    hsla(25, 100%, 49%, 0.38) 0%,
+    hsla(25, 100%, 49%, 0.49) 1%,
+    hsla(25, 100%, 49%, 0.49) 7%,
+    hsla(11, 100%, 49%, 0.49) 16%,
+    hsl(0deg 100% 5%) 31%,
+    hsl(0deg 0% 0%) 50%,
+    hsla(25, 100%, 49%, 0.49) 69%,
+    hsla(25, 100%, 49%, 0.49) 84%,
+    hsla(25, 63%, 56%, 0.49) 94%,
+    hsla(18, 55%, 57%, 0.75) 99%,
+    hsla(25, 100%, 49%, 0.49) 100%
+  );
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.5s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@include mq(tab) {
+  .back-to-top {
+    bottom: 137px;
+  }
+}
+
+.back-to-top:hover {
+  background: #555;
+}
+
+.hidden {
+  opacity: 0%;
+}
+
+.progress-bar {
+  width: 1rem;
+  background: linear-gradient(
+    0deg,
+    hsl(0deg 100% 24%) 0%,
+    hsl(0deg 100% 19%) 1%,
+    hsl(0deg 100% 14%) 7%,
+    hsl(0deg 100% 9%) 16%,
+    hsl(0deg 100% 5%) 31%,
+    hsl(0deg 0% 0%) 50%,
+    hsl(0deg 100% 6%) 69%,
+    hsl(0deg 100% 12%) 84%,
+    hsl(0deg 100% 18%) 94%,
+    hsl(0deg 100% 24%) 99%,
+    hsl(0deg 100% 29%) 100%
+  );
+  position: fixed;
+  opacity: 0.8;
+  top: 0;
+  right: 0;
+  //   bottom: 0;
+}

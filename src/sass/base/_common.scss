@@ -1,0 +1,28 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  margin: 0;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  letter-spacing: 0.05em;
+
+
+  background-color: var(--main-white-color);
+  overflow-x: hidden;
+
+  @include mq(desk) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  &.body-bask{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/main.webp);
+  }
+}
+
+body.dark{
+  background-color: aquamarine;
+}
