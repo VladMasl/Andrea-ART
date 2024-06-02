@@ -10,7 +10,7 @@ export default async function (req, res) {
         secure: true,
       auth: {
         user: 'andrea.gribovska@yahoo.com',
-        pass: 'Umetnickadusa88'
+        pass: '1'
       },
       tls: {
         rejectUnauthorized: false, // игнорируем самоподписанные сертификаты

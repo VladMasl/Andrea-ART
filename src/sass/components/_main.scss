@@ -1,4 +1,13 @@
-
+.terms {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+  &:hover {
+    color: #ff6b01;
+  }
+}
 .contact-form {
   max-width: 565px;
   margin: 50px auto;
