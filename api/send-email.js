@@ -6,10 +6,15 @@ export default async function (req, res) {
 
     const transporter = nodemailer.createTransport({
       service: 'Yahoo',
+        port: 465, // Порт для SSL
+        secure: true,
       auth: {
         user: 'andrea.gribovska@yahoo.com',
         pass: 'Umetnickadusa88'
-      }
+      },
+      tls: {
+        rejectUnauthorized: false, // игнорируем самоподписанные сертификаты
+      },
     });
 
     const mailOptions = {
