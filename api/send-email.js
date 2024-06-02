@@ -1,3 +1,4 @@
+require('dotenv').config();
 const nodemailer = require('nodemailer');
 
 export default async function (req, res) {
@@ -5,21 +6,19 @@ export default async function (req, res) {
     const { name, email, message } = req.body;
 
     const transporter = nodemailer.createTransport({
-      service: 'Yahoo',
-        port: 465, // Порт для SSL
-        secure: true,
+      service: 'Gmail',
       auth: {
-        user: 'andrea.gribovska@yahoo.com',
-        pass: '1'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
       },
       tls: {
-        rejectUnauthorized: false, // игнорируем самоподписанные сертификаты
+        rejectUnauthorized: false,
       },
     });
 
     const mailOptions = {
       from: email,
-      to: 'andrea.gribovska@yahoo.com',
+      to: process.env.EMAIL_USER,
       subject: 'Новое сообщение с формы обратной связи',
       text: `Имя: ${name}\nEmail: ${email}\nСообщение: ${message}`
     };
