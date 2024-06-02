@@ -1,35 +1,33 @@
-require('dotenv').config();
 const nodemailer = require('nodemailer');
 
-export default async function (req, res) {
+export default async (req, res) => {
   if (req.method === 'POST') {
     const { name, email, message } = req.body;
 
-    const transporter = nodemailer.createTransport({
-      service: 'Gmail',
+    // Настройка транспорта для отправки почты
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-      },
-      tls: {
-        rejectUnauthorized: false,
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
       },
     });
 
-    const mailOptions = {
+    // Настройка сообщения
+    let mailOptions = {
       from: email,
-      to: process.env.EMAIL_USER,
-      subject: 'Новое сообщение с формы обратной связи',
-      text: `Имя: ${name}\nEmail: ${email}\nСообщение: ${message}`
+      to: process.env.GMAIL_USER,
+      subject: `Contact form submission from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
 
     try {
       await transporter.sendMail(mailOptions);
-      res.status(200).send('Сообщение отправлено успешно');
+      res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
-      res.status(500).send(error.toString());
+      res.status(500).json({ message: 'Failed to send email', error: error.message });
     }
   } else {
-    res.status(405).send('Метод не поддерживается');
+    res.status(405).json({ message: 'Method not allowed' });
   }
-}
+};
