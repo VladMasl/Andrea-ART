@@ -20,6 +20,15 @@ export default async (req, res) => {
       to: process.env.GMAIL_USER,
       subject: `Contact form submission from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+        <br>
+        <p>This email was sent from your contact form.</p>
+      `,
     };
 
     try {
