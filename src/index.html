@@ -15,12 +15,64 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="./sass/index.scss" />
   </head>
 
   <body class="body-bask">
-    <include src="./partials/header.html"></include>
-    <include src="./partials/main.html"></include>
-    <include src="./partials/footer.html"></include>
+  <header class="header-bg-home js-header header-home">
+    <div class="container">
+      <nav class="navi js-navi">
+        <a class="page-link" href="./index.html">
+          <span class="logo__text">AndreaART</span>
+        </a>
+        <ul class="navi__list">
+          <li class="navi__item">
+            <a class="navi__link js-home_page current" href="./index.html">INISIO</a>
+          </li>
+          <li class="navi__item">
+            <a class="navi__link js-lib_page" href="./policy.html">POLÍTICA DE PRIVACIDAD</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="banner">
+    <img src="./images/7.jpg" alt="Banner">
+  </div>
+  <div class="container">
+    <h1 class="gallery-title">Mis trabajos</h1>
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="./images/1.jpg" alt="Artwork 1">
+      </div>
+      <div class="gallery-item">
+        <img src="./images/2.jpg" alt="Artwork 2">
+      </div>
+      <div class="gallery-item">
+        <img src="./images/3.jpg" alt="Artwork 3">
+      </div>
+      <div class="gallery-item">
+        <img src="./images/4.jpg" alt="Artwork 4">
+      </div>
+      <div class="gallery-item">
+        <img src="./images/5.jpg" alt="Artwork 5">
+      </div>
+      <div class="gallery-item">
+        <img src="./images/6.jpg" alt="Artwork 6">
+      </div>
+    </section>
+  </div>
+
+  <footer>
+      <section class="section">
+        <div class="footer container">
+          <div class="footer__box">
+            <p class="footer__item">&#169; 2024</p>
+            <p class="footer__item curent">Todos los derechos reservados</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
   </body>
 </html>
