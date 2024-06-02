@@ -18,7 +18,10 @@ body {
     line-height: 1.2;
   }
 
-
+  &.body-bask{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/main.webp);
+  }
 }
 
 body.dark {
