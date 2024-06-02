@@ -1,3 +1,43 @@
+
+.contact-form {
+  max-width: 565px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Helvetica', sans-serif; /* Шрифт */
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #6f4c40; /* Цвет кнопки */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #5a3a31; /* Цвет кнопки при наведении */
+}
 .banner {
   width: 100%;
   margin-bottom: 60px;

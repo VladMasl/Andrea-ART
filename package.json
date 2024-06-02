@@ -21,6 +21,7 @@
     "axios": "^0.27.2",
     "basiclightbox": "^5.0.4",
     "modern-normalize": "^1.1.0",
+    "nodemailer": "^6.9.13",
     "notiflix": "^3.2.5",
     "parcel-transformer-hbs": "^1.0.4",
     "simplelightbox": "^2.10.3",
